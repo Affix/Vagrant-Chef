@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title><%= node.name %></title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body id="home">
+
+	<h1>Welcome to <%= node.name %></h1>
+	This Server was deployed using Chef!<br />
+	Chef is an awesome provisioning tool from the guys at opscode. It is very easy to learn and an extremely powerful way to manage your infrastructure.<br />
+	<hr />
+	<h4>Delpoyed Services</h4>
+	<ul>
+		<li>Yum - Basic YUM Configuration</li>
+                <li>Yum-Epel - Basic YUM EPEL Configuration</li>
+                <li>php-fpm - FastCGI Process Manager</li>
+                <li>NginX - NginX Web Server, A Fast Lightweight Web Server</li>
+	</ul><br />
+	php-fpm and nginx cookbooks were written by <a href="http://affix.me">Keiran Smith</a>!
+	<br /><h4>phpinfo()</h4><br />
+	<?php phpinfo(); ?>
+</body>
+</html>
